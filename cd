@@ -1,0 +1,7 @@
+classes= 2
+train  = /home/amf/soja/train.txt
+valid  = /home/amf/soja/test.txt
+names = /home/amf/soja/labels.txt
+backup = /home/amf/soja/backup/
+
+

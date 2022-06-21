@@ -1,0 +1,24 @@
+Criando o dataset
+    baixar imagens ..OK
+    baixar e instalar o labeling ..Ok
+    anotar as imagens ok
+    dividir as imagens em train e test ..Ok
+Configurar o arquivo data .. OK
+Configurar o arquivo cfg .. OK
+Treinar o modelo ..OK
+    baixar os arquivos de peso ..OK
+    treinar.. OK
+    ./darknet detector train /home.amf/Soja/soja.data /home/amf/Soja/soja.cfg yolov4.conv.137
+Testes scripts
+./darknet detector map /home/amf/Soja/soja.data /home/amf/Soja/soja.cfg backup/soja_4000.weights
+
+
+python3 darknet_images.py \ 
+        --weights ./backup/soja_4000.weights \
+        --data_file ./soja.data \
+        --config_file ./soja.cfg \
+        --thresh 0.5 \
+        --input ./dataset/IMG_20220315_145225.jpg \
+        --ext_output
+
+        python3 darknet_images.py --weights ./backup/soja_4000.weights  --data_file ./soja.data --config_file ./soja.cfg --thresh 0.5 --input ./dataset/IMG_20220315_145225.jpg --ext_output    
